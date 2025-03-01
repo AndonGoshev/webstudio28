@@ -1,0 +1,11 @@
+{% load static %}
+<div id="header-wrapper">
+
+    <a href="{% url 'home' %}">
+        <div id="header-logo-container"><img src="{% static 'images/webstudio28-logo2.png' %}"></div>
+    </a>
+
+    {% include 'base/header/nav-section.html' %}
+
+
+</div>

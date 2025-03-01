@@ -1,0 +1,8 @@
+#header-logo-container {
+    height: 3.5em;
+}
+
+#header-logo-container img {
+    height: 100%;
+    width: 100%;
+}
