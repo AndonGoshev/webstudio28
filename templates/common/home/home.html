@@ -1,4 +1,5 @@
 {% extends 'base/base.html' %}
+{% load static %}
 
 {% block title %}
     Web Studio 28
@@ -8,11 +9,33 @@
 
     <div id="home-wrapper">
 
-
         {% include 'common/home/welcoming-section.html' %}
+
+        {% include 'common/home/secondary-section.html' %}
+    
+        {% include 'common/home/features-section.html' %}
 
 
     </div>
-    
+
 
 {% endblock %}
+
+
+
+{#<video autoplay loop muted playsinline class="background-video">#}
+{#    <source src="{% static 'images/background-video.mp4' %}" type="video/mp4">#}
+{#    Your browser does not support the video tag.#}
+{#</video>#}
+{##}
+{#.background-video {#}
+{#position: absolute;#}
+{#top: 50%;#}
+{#left: 50%;#}
+{#width: 100%;#}
+{#height: 100%;#}
+{#object-fit: cover;#}
+{#background-position: center;#}
+{#transform: translate(-50%, -50%);#}
+{#/*z-index: 5;*/#}
+{#}#}

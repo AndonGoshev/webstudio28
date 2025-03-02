@@ -1,0 +1,146 @@
+{% load static %}
+<div id="features-wrapper">
+
+    <div id="features-heading-section">
+
+        <h2>Какво ще направим за теб?</h2>
+
+
+    </div>
+
+    <div id="features-cards">
+
+        <div class="feature-card">
+
+            <div class="feature-icon-container">
+
+                <div class="feature-icon">
+                    <img src="{% static 'images/modern.png' %}">
+                </div>
+
+            </div>
+
+            <div class="feature-text">
+
+                <h4>Модерен уебсайт</h4>
+                <p>Избери от нашата галерия с дизайни или представи своя идея.</p>
+
+            </div>
+
+        </div>
+
+        <div class="feature-card">
+
+            <div class="feature-icon-container">
+
+                <div class="feature-icon">
+                    <img src="{% static 'images/responsive.png' %}">
+                </div>
+
+            </div>
+
+            <div class="feature-text">
+
+                <h4>Респонсив дизайн</h4>
+                <p>Вашият сайт ще изглежда перфектно на всички устройства.</p>
+
+            </div>
+
+        </div>
+
+        <div class="feature-card">
+
+            <div class="feature-icon-container">
+
+                <div class="feature-icon">
+                    <img src="{% static 'images/seo.png' %}">
+                </div>
+
+            </div>
+
+            <div class="feature-text">
+
+                <h4>SEO</h4>
+                <p>Класиране на сайта ви в Google.</p>
+
+            </div>
+
+        </div>
+
+        <div class="feature-card">
+
+            <div class="feature-icon-container">
+
+                <div class="feature-icon">
+                    <img src="{% static 'images/admin-panel.png' %}">
+                </div>
+
+            </div>
+
+            <div class="feature-text">
+
+                <h4>Админ панел</h4>
+                <p>Управлявайте сайта си ,според вашите нужди.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="simple-complex-container">
+
+        <div class="simple-complex-card">
+
+            <div class="simple-complex-image">
+
+                <img src="{% static 'images/simple.png' %}">
+
+            </div>
+            
+            <div class="simple-complex-text-container">
+                
+                <h4>От изчистен и стилен дизайн</h4>
+                
+            </div>
+
+        </div>
+
+        <div id="simple-to-complex-arrow">
+
+            <img>
+
+        </div>
+
+        <div class="simple-complex-card">
+
+            <div class="simple-complex-image">
+
+                <img src="{% static 'images/complex.png' %}">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+    
+    document.addEventListener("DOMContentLoaded", function () {
+    const card = document.querySelector(".simple-complex-card");
+
+    card.addEventListener("wheel", function (event) {
+        const isAtTop = card.scrollTop === 0;
+        const isAtBottom = card.scrollTop + card.clientHeight >= card.scrollHeight;
+
+        if ((event.deltaY < 0 && isAtTop) || (event.deltaY > 0 && isAtBottom)) {
+            event.preventDefault(); // Prevent page scrolling
+        }
+    }, { passive: false }); // Prevent default scroll behavior
+});
+
+    
+</script>

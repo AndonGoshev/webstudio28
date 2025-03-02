@@ -27,4 +27,9 @@ html, body {
 main {
     background-color: #F9F7F7;
     min-height: 100vh;
+    color: #404040;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #112D4E;
 }
