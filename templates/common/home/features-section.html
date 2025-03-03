@@ -88,59 +88,11 @@
 
     </div>
 
-    <div id="simple-complex-container">
-
-        <div class="simple-complex-card">
-
-            <div class="simple-complex-image">
-
-                <img src="{% static 'images/simple.png' %}">
-
-            </div>
-            
-            <div class="simple-complex-text-container">
-                
-                <h4>От изчистен и стилен дизайн</h4>
-                
-            </div>
-
-        </div>
-
-        <div id="simple-to-complex-arrow">
-
-            <img>
-
-        </div>
-
-        <div class="simple-complex-card">
-
-            <div class="simple-complex-image">
-
-                <img src="{% static 'images/complex.png' %}">
-
-            </div>
-
-        </div>
-
-    </div>
 
 </div>
 
 
 <script>
     
-    document.addEventListener("DOMContentLoaded", function () {
-    const card = document.querySelector(".simple-complex-card");
 
-    card.addEventListener("wheel", function (event) {
-        const isAtTop = card.scrollTop === 0;
-        const isAtBottom = card.scrollTop + card.clientHeight >= card.scrollHeight;
-
-        if ((event.deltaY < 0 && isAtTop) || (event.deltaY > 0 && isAtBottom)) {
-            event.preventDefault(); // Prevent page scrolling
-        }
-    }, { passive: false }); // Prevent default scroll behavior
-});
-
-    
 </script>
