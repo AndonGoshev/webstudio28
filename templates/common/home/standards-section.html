@@ -27,8 +27,8 @@
                     <div id="standard-right-text-container">
 
                         <h3>Начална страница (home)</h3>
-                        <p>Началната станица на сайта ви е първото нещо което клиента вижда за вас, от тази страница
-                            зависи дали ще остане и ще иска да остане и да работи с вас.</p>
+                        <p>Началната страница е решаваща за всичко! Нашата работа е да привлечем клиентите ви още от
+                            първото им посещение във вашия сайт. </p>
 
                     </div>
 
@@ -46,10 +46,9 @@
                     <div id="standard-auth-left-text-container">
 
                         <h3>Регистрация и логин </h3>
-                        <p>Ние разбираме ,че тази стъпка е най-неприятната за всеки потребител. Заради това се грижим да
-                            бъде възможно най- бърза, лесна и с красив дизайн ,за да може потребителя да се чувства
-                            комфортно в тази страница. (Ако твоя сайт е тип бизнес-картичка няма да има нужда от тази
-                            стъпка)</p>
+                        <p>Знаем, че потребителите не обичат регистрация, но когато това е необходимо, ще я направим
+                            бърза и с красив дизайн, като ще има и възможност за регистрация с един клик чрез
+                            Google.</p>
 
                     </div>
 
@@ -61,11 +60,144 @@
 
                 </div>
 
+            </div>
+
+            <div id="standards-client-section">
+
+                <div id="standards-client-text-container">
+
+                    <div id="standards-client-text-inner-container">
+
+                        <h3>Най-важното сте вие</h3>
+                        <p>Това е най-вълнуващата част за нас! Ще изслушаме внимателно вашата идея и заедно ще я
+                            реализираме в дигитална форма – дашборд, онлайн магазин, продуктов каталог или каквото и да
+                            е. Ако можете да си го представите - ние можем да го направим! </p>
+
+                    </div>
+
+                </div>
+
+                <div id="standards-client-cards-section">
+
+                    <div id="standards-client-background"><img src="{% static 'images/client-background.png' %}"></div>
+
+                    <div class="standards-client-cards-line-section">
+
+                        <div class="standards-client-card">
+
+                            <div class="client-card-title-section">
+
+                                <h4>Dashboard</h4>
+
+                            </div>
+
+                            <img src="{% static 'images/dashboard.png' %}">
+
+                        </div>
+
+                        <div class="standards-client-card">
+
+                            <div class="client-card-title-section">
+
+                                <h4>Система за резервации</h4>
+
+                            </div>
+
+                            <img src="{% static 'images/booking-system.png' %}">
+
+                        </div>
+
+                    </div>
+
+                    <div class="standards-client-cards-line-section">
+
+                        <div class="standards-client-card">
+
+                            <div class="client-card-title-section">
+
+                                <h4>Интерактивни форми</h4>
+
+                            </div>
+
+                            <img src="{% static 'images/interactive-forms.png' %}">
+
+                        </div>
+
+                        <div class="standards-client-card">
+
+                            <div class="client-card-title-section">
+
+                                <h4>Акаунт мениджър</h4>
+
+                            </div>
+
+                            <img src="{% static 'images/account-manager.png' %}">
+
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
+
 
         </div>
 
     </div>
 
 </div>
+
+
+<script>
+
+    // Create Modal Elements (same as before)
+    const modal = document.createElement("div");
+    modal.classList.add("modal");
+    document.body.appendChild(modal);
+
+    const modalContent = document.createElement("div");
+    modalContent.classList.add("modal-content");
+    modal.appendChild(modalContent);
+
+    const closeBtn = document.createElement("span");
+    closeBtn.classList.add("standards-close-button");
+    closeBtn.textContent = "×";
+    modalContent.appendChild(closeBtn);
+
+    const modalImg = document.createElement("img");
+    modalImg.id = "modal-img";
+    modalContent.appendChild(modalImg);
+
+    // Function to Open Modal
+    document.querySelectorAll("#standards-section img").forEach(img => {
+        img.addEventListener("click", function () {
+            if (!this.src.includes("background")) { // Ignore background images
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+
+                // Disable scroll on the main page
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+
+    // Close Modal on "X" Click
+    closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+
+        // Re-enable scroll on the main page when the modal is closed
+        document.body.style.overflow = 'auto';
+    });
+
+    // Close Modal on Click Outside
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none";
+
+            // Re-enable scroll on the main page when the modal is closed
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+</script>
