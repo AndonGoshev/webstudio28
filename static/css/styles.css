@@ -9,3 +9,6 @@
 @import "common/home/features-section.css";
 @import "common/home/standards-section.css";
 @import "common/home/bottom-section.css";
+@import "common/about/about.css";
+@import "common/about/top-section.css";
+@import "common/about/work-road-section.css";
