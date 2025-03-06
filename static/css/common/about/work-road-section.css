@@ -1,46 +1,78 @@
 #work-road-wrapper {
-    width: 90%;
-    height: 28em;
+    padding: 4em 1em 5em 1em;
+    width: 100%;
+    background-color: #F8EDE3;
 }
 
 #work-road-section {
-    width: 100%;
+    margin: 0 auto;
+    width: 90%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 5em;
+    gap: 4em;
 }
 
 #work-road-text-container {
+    font-size: 1.1em;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+#work-road-text-container h2 span {
+    color: #F18B5D;
+}
+
+
+/*,*/
+/*,*/
+/*,*/
+/*,*/
+/*,*/
+
 
 #work-road-cards-section {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    gap: 1em;
 }
 
 .work-road-card {
+    /*padding: 1em;*/
     width: 28%;
-    height: 20em;
+    height: 22em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 25px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/*,*/
+/*,*/
+/*,*/
+/*,*/
+/*,*/
+
+
+.work-road-card-image-section {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .work-road-card-image {
-    width: 100%;
-    height: 80%;
-    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
+    width: 65%;
+    height: 90%;
     overflow: hidden;
-    margin-bottom: 1em;
     object-fit: cover;
     object-position: center;
 }
@@ -50,6 +82,31 @@
     height: 100%;
 }
 
-#work-road-cards-section > div:nth-child(1) > div.work-road-card-image > img {
-    opacity: 0.9;
+#work-road-cards-section > div:nth-child(3) > div.work-road-card-image-section > div {
+    width: 80%;
+}
+
+
+/*,*/
+/*,*/
+/*,*/
+/*,*/
+/*,*/
+
+
+.work-road-card-text {
+    width: 90%;
+    height: 20%;
+}
+
+.work-road-card h3 {
+    width: 90%;
+    margin: auto;
+    color: #424551;
+    font-size: 1.5em;
+}
+
+.work-road-card p {
+    width: 90%;
+    margin: auto;
 }
