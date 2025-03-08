@@ -94,7 +94,7 @@
     border-radius: 50%;
     overflow: hidden;
     border: 2px solid #ef6e33;
-    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .member-card-image img {
@@ -105,6 +105,10 @@
 
 #team-cards > div:nth-child(1) > div.member-card-left-container > div {
     border: 2px solid #285795;
+}
+
+#team-cards > div:nth-child(1) > div.member-card-right-container > div.member-card-secondary-section > p > span {
+    color: #285795;
 }
 
 /*,*/
