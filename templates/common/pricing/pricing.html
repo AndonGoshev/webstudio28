@@ -1,12 +1,18 @@
 {% extends 'base/base.html' %}
 
 {% block title %}
-	Цени и услуги
+    Цени и услуги
 {% endblock %}
 
 {% block content %}
-	
-    {% include 'common/pricing/pricing-hero.html' %}
-    
-    
+
+    <div id="pricing-wrapper">
+
+        {% include 'common/pricing/pricing-hero.html' %}
+
+        {% include 'common/pricing/pricing-options.html' %}
+
+    </div>
+
+
 {% endblock %}
