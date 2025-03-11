@@ -1,0 +1,5 @@
+#contacts-page-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}

@@ -12,3 +12,7 @@ class AboutView(TemplateView):
 
 class PricingView(TemplateView):
     template_name = 'common/pricing/pricing.html'
+
+
+class ContactsView(TemplateView):
+    template_name = 'common/contacts/contacts.html'

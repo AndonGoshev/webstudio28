@@ -1,14 +1,29 @@
-<div id="actions-section-wrapper">
+{% load static %}
+<div id="actions-wrapper">
+
+    <h1>Нека обсъдим твоя проект!</h1>
     
-    <div id="actions-section-section">
-        
-        <div id="actions-title">
+    <div id="actions-section">
+
+        <div class="action-card">
             
-            <h2>Свържи се с нас</h2>
-            <a href="tel:+3598907007">Обаждане</a>
+            <div class="action-image"><img src="{% static 'images/old-phone.png' %}"></div>
+
+            <p>Обади ни се</p>
+            <a href="tel:+3598907007">+3598907007</a>
+
+        </div>
+
+        <div  class="action-card">
             
+            <div class="action-image"><img src="{% static 'images/calendar.png' %}"></div>
+
+            <p>Среща в нашия офис или Google Meet</p>
+            <a href="tel:+3598907007">Запази час</a>
+
         </div>
         
+
     </div>
-    
+
 </div>
