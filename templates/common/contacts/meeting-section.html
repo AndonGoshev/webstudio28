@@ -1,25 +1,44 @@
+{% load static %}
 <div id="meeting-wrapper">
-    
+
     <div id="meeting-section">
-        
-        <h2>Безплатна консултация</h2>
-        
+
         <div id="meeting-options">
-            
-            <div class="meeting-text">
-                
-                <p>Запишете час за безплатна консултация в нашия офис или в Google Meet</p>
-                
+
+            <div id="meeting-text">
+
+                <p>Запишете час за <span>безплатна</span> консултация в нашия офис или в Google Meet</p>
+
             </div>
-            
-            <div class="meeting-card">
+
+            <div id="meeting-images">
                 
-                <img src="">
-                
+                <div id="meeting-bg">
+                    
+                    <img src="{% static 'images/meetings-bg.jpg' %}">
+                    
+                </div>
+
+                <div class="meeting-image-section">
+
+                    <a href="#"><img src="{% static 'images/live-meeting.png' %}"></a>
+                    
+                    <p>В нашия офис</p>
+
+                </div>
+
+                <div class="meeting-image-section">
+
+                    <a href="#"><img src="{% static 'images/remote-meeting.png' %}"></a>
+                    
+                    <p>Google meet</p>
+
+                </div>
+
             </div>
-            
+
         </div>
-        
+
     </div>
-    
+
 </div>
