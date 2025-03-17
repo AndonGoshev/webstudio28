@@ -6,3 +6,19 @@
     height: 100%;
     width: 100%;
 }
+
+@media (max-width: 770px) {
+
+    #header-logo-container {
+        height: 3em;
+    }
+
+}
+
+@media (max-width: 570px) {
+
+    #header-logo-container {
+        height: 2.5em;
+    }
+
+}

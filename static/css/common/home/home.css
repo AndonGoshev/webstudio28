@@ -6,3 +6,12 @@
     align-items: center;
     gap: 8em;
 }
+
+
+@media (max-width: 570px) {
+
+    #home-wrapper {
+        padding: 2em 0;
+    }
+
+}

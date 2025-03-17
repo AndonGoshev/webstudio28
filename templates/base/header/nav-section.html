@@ -1,12 +1,62 @@
 <div id="header-nav-section">
-        
-    <ul id="header-nav">
-        
-        <a href="#"><li>Начало</li></a>
-        <a href="{% url 'about' %}"><li>За нас</li></a>
-        <a href="{% url 'pricing' %}"><li>Цени и услуги</li></a>
-        <a href="{% url 'contacts' %}"><li>Контакти</li></a>
-        
-    </ul>
-    
+
+        <ul id="header-nav">
+
+            <a href="#"><li>Начало</li></a>
+            <a href="{% url 'about' %}"><li>За нас</li></a>
+            <a href="{% url 'pricing' %}"><li>Цени и услуги</li></a>
+            <a href="{% url 'contacts' %}"><li>Контакти</li></a>
+
+        </ul>
+
+    <div id="mobile-nav">
+
+        <input type="checkbox" id="overlay-input"/>
+
+        <label for="overlay-input" id="overlay-button"><span></span></label>
+
+        <div id="overlay">
+
+            <ul>
+
+                <li><a href="{% url 'home' %}">Начало</a></li>
+                <li><a href="{% url 'about' %}">За нас</a></li>
+                <li><a href="{% url 'pricing' %}">Цени и услуги</a></li>
+                <li><a href="{% url 'contacts' %}">Контакти</a></li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
 </div>
+
+
+<script>
+    
+
+    // Get the checkbox and body elements
+    const checkbox = document.getElementById('overlay-input');
+    const body = document.body;
+
+    // Function to handle the overflow property on body
+    function toggleBodyOverflow() {
+        if (checkbox.checked) {
+            body.style.overflow = 'hidden'; // Disable scrolling
+            body.style.height = '100vh'; // Prevent body from stretching
+        } else {
+            body.style.overflow = ''; // Enable scrolling
+            body.style.height = ''; // Reset the height
+        }
+    }
+
+    // Add event listener for when the checkbox changes
+    checkbox.addEventListener('change', toggleBodyOverflow);
+
+    // Initial state (if the checkbox is checked by default)
+    toggleBodyOverflow();
+
+
+    
+</script>

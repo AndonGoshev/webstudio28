@@ -18,3 +18,12 @@
     text-decoration: none;
     font-weight: 500;
 }
+
+
+@media (max-width: 920px) {
+
+    #header-nav {
+        display: none;
+    }
+
+}
