@@ -84,3 +84,19 @@
 #contacts-link-button:active {
     box-shadow: none;
 }
+
+@media (max-width: 570px) {
+
+    #home-bottom-section {
+        margin: 0 0 1em 0;
+    }
+
+    #roadmap-text-section > h1 {
+        display: none;
+    }
+
+    #roadmap-text-section > p {
+        display: none;
+    }
+
+}
