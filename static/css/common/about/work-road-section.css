@@ -38,12 +38,14 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    gap: 1em;
+    gap: 2em;
+    padding-bottom: 2em;
 }
 
 .work-road-card {
     /*padding: 1em;*/
-    width: 28%;
+    min-width: 20em;
+    max-width: 20em;
     height: 22em;
     display: flex;
     flex-direction: column;
@@ -110,4 +112,78 @@
 .work-road-card p {
     width: 90%;
     margin: auto;
+}
+
+@media (max-width: 1300px) {
+
+    #work-road-cards-section {
+        overflow-x: auto;
+    }
+
+    .work-road-card {
+        padding: 1em 0;
+        min-width: 15em;
+        max-width: 10em;
+        height: 20em;
+        justify-content: flex-start;
+    }
+
+
+}
+
+
+@media (max-width: 800px) {
+
+    #work-road-section {
+        gap: 2em;
+    }
+
+    #work-road-wrapper {
+        padding: 2em 0;
+    }
+
+    #work-road-cards-section {
+        overflow-x: auto;
+        padding-right: 0.5em;
+    }
+
+    .work-road-card {
+        padding: 1em 0;
+        min-width: 15em;
+        max-width: 10em;
+        height: 18em;
+        justify-content: flex-start;
+    }
+
+    .work-road-card-text {
+        font-size: 0.9em;
+    }
+
+
+}
+
+@media (max-width: 570px) {
+
+    #work-road-cards-section {
+        overflow-x: auto;
+        padding-right: 0.5em;
+    }
+
+    .work-road-card {
+        padding: 1.5em 0;
+        min-width: 14em;
+        max-width: 10em;
+        height: 18em;
+        justify-content: flex-start;
+    }
+
+    .work-road-card-text {
+        font-size: 0.9em;
+    }
+
+
+    #work-road-text-container {
+        align-items: flex-start;
+    }
+
 }
