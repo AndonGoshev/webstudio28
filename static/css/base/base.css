@@ -22,10 +22,13 @@ html, body {
     flex-direction: column;
     padding: 0;
     flex: 1;
+    background: rgb(108,102,99);
+background: radial-gradient(circle, rgba(108,102,99,0.19931722689075626) 0%, rgba(213,130,113,0.38699229691876746) 23%, rgba(204,129,196,0.196516106442577) 31%, rgba(136,138,208,0.5410539215686274) 77%, rgba(186,181,181,0.19931722689075626) 100%);
+
 }
 
 main {
-    background-color: #F9F7F7;
+    /*background-color: #F9F7F7;*/
     min-height: 100vh;
     color: #404040;
 }

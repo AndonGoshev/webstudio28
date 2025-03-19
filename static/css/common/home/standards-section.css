@@ -2,6 +2,16 @@
     width: 90%;
 }
 
+    #standards-section hr {
+        width: 75%;
+        height: 5px;
+        background-color: gray;
+background: rgb(108,102,99);
+background: linear-gradient(121deg, rgba(108,102,99,1) 0%, rgba(213,130,113,1) 23%, rgba(204,129,196,1) 47%, rgba(136,138,208,1) 77%, rgba(186,181,181,1) 100%);
+        opacity: 0.8;
+        border-radius: 25px;
+    }
+
 #standards-section {
     width: 100%;
     display: flex;
@@ -357,6 +367,7 @@
         margin-top: 1em;
         width: 100%;
         /*background-image: linear-gradient(to top, #a3bded 0%, #6991c7 100%);*/
+        margin-bottom: 3em;
     }
 
     #standards-section {
@@ -391,7 +402,7 @@
     }
 
     #standards-heading-section > h2 {
-        margin-top: 0.8em;
+        margin-top: 1.5em;
         text-align: center;
         width: 120%;
         z-index: 2;
@@ -520,12 +531,13 @@
     }
 
     #standards-section hr {
-        width: 100%;
+        width: 75%;
         height: 5px;
         background-color: gray;
-        background: rgb(241, 139, 93);
-        background: linear-gradient(180deg, rgba(241, 139, 93, 1) 0%, rgba(17, 45, 78, 1) 100%);
-        opacity: 0.2;
+background: rgb(108,102,99);
+background: linear-gradient(121deg, rgba(108,102,99,1) 0%, rgba(213,130,113,1) 23%, rgba(204,129,196,1) 47%, rgba(136,138,208,1) 77%, rgba(186,181,181,1) 100%);
+        opacity: 0.8;
+        border-radius: 25px;
     }
 
 
