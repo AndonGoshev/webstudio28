@@ -52,7 +52,7 @@
     border-radius: 15px;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
     gap: 2em;
-    /*background-color: #F8EDE3;*/
+    background-color: #f4f4f4;
     overflow: hidden;
 }
 
@@ -189,4 +189,32 @@
 .member-tech-stack-section ul li img {
     width: 100%;
     height: 100%;
+}
+
+
+
+
+
+@media (max-width: 570px) {
+
+    #team-section {
+        gap: 2em;
+    }
+
+    #team-heading-section {
+        align-items: flex-start ;
+    }
+
+    .member-card {
+        width: 100%;
+        height: 23em;
+        flex-direction: column;
+        gap: 0.8em;
+    }
+
+    .member-card-image {
+        width: 8em;
+        height: 8em;
+    }
+
 }
