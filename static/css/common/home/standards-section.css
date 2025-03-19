@@ -18,6 +18,10 @@
     align-items: center;
 }
 
+#standards-heading-section img {
+    display: none;
+}
+
 /*,*/
 /*,*/
 /*,*/
@@ -352,11 +356,11 @@
     #standards-section-wrapper {
         margin-top: 1em;
         width: 100%;
-                background-color: #fff;
+        /*background-image: linear-gradient(to top, #a3bded 0%, #6991c7 100%);*/
     }
 
     #standards-section {
-        margin: 0 0 2em 0;
+        margin: 0 0 0 0;
         gap: 1em;
     }
 
@@ -366,19 +370,34 @@
         padding: 2em 1em;
         flex-direction: column;
         min-height: 28em;
-        background-color: #fff;
+        /*background-color: #789DBC;*/
+        justify-content: center;
     }
 
 
     #standards-heading-section {
         align-items: center;
+        position: relative;
+        height: 5em;
+    }
+
+    #standards-heading-section img {
+                display: inline-block;
+        position: absolute;
+        width: 100%;
+        height: 400%;
+        object-fit: cover;
+        opacity: 0.8;
     }
 
     #standards-heading-section > h2 {
-        background-color: #112D4E;
+        margin-top: 0.8em;
         text-align: center;
         width: 120%;
-        color: #fff;
+        z-index: 2;
+        color: #ffffff;
+        font-size: 1.8em;
+        text-shadow: 5px 1px 5px rgba(0, 0, 0, 0.5);
     }
 
     #standards-heading-section > p {
@@ -412,7 +431,7 @@
     #standards-auth-section {
         flex-direction: column;
         height: 25em;
-        justify-content: space-evenly;
+        justify-content: center;
         width: 90% !important;
     }
 
@@ -434,6 +453,7 @@
         width: 100%;
         height: 50%;
         justify-content: center;
+        padding-bottom: 0.8em;
     }
 
     #standard-auth {
@@ -448,7 +468,9 @@
     /*,*/
     #standards-client-section {
         width: 100%;
-        padding: 1em 0;
+        padding: 1.5em 0;
+        justify-content: center;
+        gap: 0.5em;
     }
 
     #standards-client-text-container {
@@ -473,7 +495,7 @@
     }
 
     .standards-client-cards-line-section {
-        padding: 2em 1em;
+        padding: 1em 1em;
         gap: 3em;
         width: 36em;
     }
@@ -506,8 +528,5 @@
         opacity: 0.2;
     }
 
-    #standards-auth-section {
-        padding: 1em 0;
-    }
 
 }
