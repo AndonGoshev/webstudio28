@@ -45,6 +45,10 @@
 
 @media (max-width: 570px) {
 
+    #pricing-wrapper {
+        margin-top: 1em;
+    }
+
     #hand-written-section h2 {
         width: 100%;
         font-size: 1em;

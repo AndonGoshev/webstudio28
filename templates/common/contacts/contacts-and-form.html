@@ -1,56 +1,83 @@
-{#{% load static %}#}
-{##}
-{#<div id="contacts-wrapper">#}
-{##}
-{#    <div id="contacts-section">#}
-{##}
-{#        <h1>Свържете се с нас</h1>#}
-{##}
-{#        <div id="contacts-options-container">#}
-{##}
-{#            <div class="option-container">#}
-{##}
-{#                <div class="option-image"><img src="{% static 'images/phone-contacts.png' %}"></div>#}
-{##}
-{#                <div class="option-text">#}
-{##}
-{#                    <h3>Телефон</h3>#}
-{#                    <a href="tel:+359892907007">+359892907007</a>#}
-{##}
-{#                </div>#}
-{##}
-{#            </div>#}
-{##}
-{#            <div class="option-container">#}
-{##}
-{#                <div class="option-image"><img src="{% static 'images/mail.png' %}"></div>#}
-{##}
-{#                <div class="option-text">#}
-{##}
-{#                    <h3>Имейл</h3>#}
-{#                    <a href="mailto:webstudio28@gmail.com">webstudio28@gmail.com</a>#}
-{##}
-{#                </div>#}
-{##}
-{#            </div>#}
-{##}
-{#            <div class="option-container">#}
-{##}
-{#                <div class="option-image"><img src="{% static 'images/location.png' %}"></div>#}
-{##}
-{#                <div class="option-text">#}
-{##}
-{#                    <h3>Адрес</h3>#}
-{#                    <p style="text-align: center">Бул. Васил Априлов 49, гр. Пловдив</p>#}
-{##}
-{#                </div>#}
-{##}
-{#            </div>#}
-{##}
-{#        </div>#}
-{##}
-{#    </div>#}
-{##}
-{#</div>#}
+{% load static %}
 
 
+<div id="contacts-wrapper">
+
+        <div id="contacts-ct">
+
+            <div id="contacts">
+
+                <div id="contacts-phone"><img src="{% static 'images/standards1.png' %}"></div>
+
+                <div id="contacts-inner-ct">
+
+                    <h1>Контакти</h1>
+
+                    <div id="contact-containers">
+
+                        <div class="contact-ct">
+
+                            <h3>Телефон</h3>
+                            <a href="tel:+359886118738"><img src="{% static 'images/f-phone.png' %}">+359 88 611 8738</a>
+
+                        </div>
+
+                        <div class="contact-ct">
+
+                            <h3>Имейл</h3>
+                            <a><img src="{% static 'images/f-email.png' %}">dobripraktiki@gmail.com</a>
+
+                        </div>
+
+                        <div class="contact-ct">
+
+                            <h3>Адрес</h3>
+                            <a href="https://www.google.com/maps?q=Бул.+Васил+Априлов+49,+Пловдив" target="_blank">
+                <img src="{% static 'images/f-location.png' %}" alt="Location">
+                Бул. Васил Априлов 49, гр.Пловдив
+            </a>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="contact-form-ct">
+
+                <div id="contacts-form-left-ct"></div>
+
+                <div id="contact-form-ct-inner">
+                    
+                    <h1>Връзка с нас</h1>
+
+                    <form action="https://api.web3forms.com/submit" method="POST">
+
+                        <!-- Replace with your Access Key -->
+                        <input type="hidden" name="access_key" value="d8e4d54f-7be7-45ba-862e-bda0473c8380">
+
+                        <!-- Form Inputs. Each input must have a name="" attribute -->
+                        <input type="text" name="name" required placeholder="Име и фамилия">
+                        <input type="email" name="email" required placeholder="Имейл">
+                        <textarea name="message" required placeholder="Съобщение"></textarea>
+
+                        <!-- Honeypot Spam Protection -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                        <!-- Custom Confirmation / Success Page -->
+                        <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html">
+
+                        <button type="submit">Изпрати</button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
