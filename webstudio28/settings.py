@@ -1,12 +1,15 @@
+import os
 from pathlib import Path
+
+from decouple import config, Csv
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-1%rp#@dgol9cp5_&4_p@q!dn9b4h3r_1xrc5771wb14ke4_mid'
+SECRET_KEY = config('SECRET_KEY')
 
-DEBUG = True
+DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['192.168.0.156', 'localhost', '192.168.0.45']
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 
 INSTALLED_APPS = [
@@ -21,6 +24,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -52,13 +56,9 @@ WSGI_APPLICATION = 'webstudio28.wsgi.application'
 
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "webstudio28",
-        "USER": "admin",
-        "PASSWORD": "admin",
-        "HOST": "127.0.0.1",
-        "PORT": "5432",
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -100,3 +100,11 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+if not DEBUG:
+    # Tell Django to copy static assets into a path called `staticfiles` (this is specific to Render)
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    # Enable the WhiteNoise storage backend, which compresses static files to reduce disk use
+    # and renames the files with unique names for each version to support long-term caching
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
