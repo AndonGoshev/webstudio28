@@ -2,27 +2,29 @@
 <div id="actions-wrapper">
 
     <h1>Нека обсъдим твоя проект!</h1>
-    
+
     <div id="actions-section">
 
         <div class="action-card">
-            
-            <div class="action-image"><img src="{% static 'images/old-phone.png' %}"></div>
+
+            <div class="action-image"><img src="{% static 'images/phone-contacts.png' %}"></div>
 
             <p>Обади ни се</p>
-            <a href="tel:+3598907007">+3598907007</a>
+            <a href="tel:+359892907007">+359892907007</a>
 
         </div>
 
-        <div  class="action-card">
-            
-            <div class="action-image"><img src="{% static 'images/calendar.png' %}"></div>
+        <div class="action-card">
+
+            <div class="action-image"><img src="{% static 'images/calendar1.png' %}"></div>
 
             <p>Среща в нашия офис или Google Meet</p>
-            <a href="tel:+3598907007">Запази час</a>
+{#            <a href="https://calendly.com/andon-go6ev/30min" target="_blank">Запази час</a>#}
+            
+            <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/andon-go6ev/30min'});return false;">Запази час</a>
 
         </div>
-        
+
 
     </div>
 

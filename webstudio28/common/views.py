@@ -16,3 +16,7 @@ class PricingView(TemplateView):
 
 class ContactsView(TemplateView):
     template_name = 'common/contacts/contacts.html'
+
+
+class MessageSentSuccessfullyView(TemplateView):
+    template_name = 'common/contacts/message-sent.html'

@@ -71,7 +71,7 @@
             position: fixed; /* Use fixed positioning to avoid affecting the layout */
     top: 0;
     left: 0;
-    height: 100vh;
+    height: zvh;
     width: 100vw;
     background: #F9F7F7;
     z-index: 2;

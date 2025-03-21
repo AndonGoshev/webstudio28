@@ -30,7 +30,12 @@
     justify-content: space-between;
     border-radius: 25px;
     border: 1px solid #dfdede;
-        background-color: #fff;
+    background-color: #fff;
+    gap: 1em;
+}
+
+.feature-text {
+    flex-grow: 1;
 }
 
 .feature-icon-container {
