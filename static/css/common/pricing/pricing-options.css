@@ -138,13 +138,13 @@
 
     .pricing-card {
         width: 25em;
-        height: 22em;
+        height: 26em;
         gap: 0.5em;
     }
 
     #pricing-cards > div:nth-child(2) {
         width: 25em;
-        height: 22em;
+        height: 26em;
         order: -1;
     }
 
