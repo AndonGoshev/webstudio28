@@ -2,6 +2,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="bg_BG">
+    <meta property="og:title" content="Изграждаме вашите идеи в модерни уебсайтове">
+    <meta property="og:description"
+          content="От вашата идея до професионален и модерен уебсайт. Персонализирани решения за всеки клиент.">
+    <meta property="og:url" content="https://webstudio28.com/"> <!-- Replace with your actual URL -->
+    <meta property="og:site_name" content="WebStudio28">
+    <meta property="og:image" content="https://www.webstudio28.com/static/images/socials-paste.png">
+    <!-- Replace with your OG image URL -->
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
     <meta charset="UTF-8">
 
     <title>{% block title %}{% endblock %}</title>
@@ -10,7 +23,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/fav-icon.png' %}" style="width: 32px; height: 32px">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/fav-icon.png' %}"
+          style="width: 32px; height: 32px">
 
 
 </head>
@@ -18,11 +32,15 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R3DVEX9Z67"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-R3DVEX9Z67');
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-R3DVEX9Z67');
 </script>
 <body>
 
