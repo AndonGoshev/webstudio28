@@ -1,0 +1,141 @@
+{% load static %}
+
+<section id="testimonials">
+
+    <div id="testimonials-heading">
+
+        <p>Отзиви</p>
+        <h2>Нашите клиенти и проектите които направихме за тях</h2>
+
+    </div>
+
+
+    <div id="testimonials-cards">
+
+        <div class="t-card">
+
+
+            {#            <div class="t-profile">#}
+            {##}
+            {##}
+            {#            </div>#}
+
+            <div class="website-media">
+
+                <a href="https://www.airevest.com" target="_blank"><img src="{% static 'images/airevest.png' %}"></a>
+
+            </div>
+
+            <a target="_blank" href="https://www.airevest.com" class="website-link">www.airevest.com</a>
+
+            <p>Изключително доволен съм от Webstudio28! Много ми помогнаха да изчистя идеята си и я реализираха по
+                най-добрия начин. Отлична комуникация, професионализъм и внимание към детайла!
+            </p>
+
+            <hr>
+
+            <div class="name-stars">
+
+                <p><img class="profile-img" src="{% static 'images/simeon-gatev.jpeg' %}" alt="Профилна снимка жена">Симеон
+                    Гатев</p>
+
+                <div class="star-rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="t-card">
+
+            <div class="website-media">
+
+                <a href="https://www.rosi-yovcheva.com" target="_blank"><img
+                        src="{% static 'images/rosi-yovcheva.png' %}"></a>
+
+            </div>
+
+            <a target="_blank" href="https://www.rosi-yovcheva.com" class="website-link">www.rosi-yovcheva.com</a>
+
+            <p>Не вярвах, че правенето на сайт може да е толкова лесно и бързо! Почти без думи ме разбраха, всичко
+                беше светкавично. Сайтът напълно отразява мен и моята работа – и хората го усещат още с първото влизане.</p>
+
+            <hr>
+
+            <div class="name-stars">
+
+                <p><img class="profile-img" src="{% static 'images/rosi-yovcheva.jpg' %}" alt="Профилна снимка жена">Роси
+                    Йовчева</p>
+
+                <div class="star-rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="t-card">
+
+            <div class="website-media">
+
+                <a href="https://www.darsimoti.com" target="_blank"><img src="{% static 'images/darsimoti.png' %}"></a>
+
+            </div>
+
+            <a target="_blank" href="https://www.darsimoti.com" class="website-link">www.darsimoti.com</a>
+
+            <p>Преди ми предлагаха сложни и тежки софтуерни решения, които не отговаряха на нуждите ми. Тук обаче за
+                първи път някой наистина разбра какво искам – модерен, изчистен сайт, който точно отразява бизнеса ми,
+                без нищо излишно.</p>
+
+            <hr>
+
+            <div class="name-stars">
+
+                <p><img class="profile-img" src="{% static 'images/snejana-shkodrova.jpg' %}" alt="Профилна снимка">Снежана
+                    Шкодрова</p>
+
+                <div class="star-rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.from(".t-card", {
+            scrollTrigger: {
+                trigger: "#testimonials-cards",
+                start: "top 75%",
+                toggleActions: "play none none none"
+            },
+            opacity: 0,
+            y: 40,
+            duration: 1,
+            stagger: 0.6,
+            ease: "power2.out"
+        });
+    });
+</script>
