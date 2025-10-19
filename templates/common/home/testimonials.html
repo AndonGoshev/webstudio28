@@ -9,6 +9,22 @@
 
     </div>
 
+    <div id="partydrinks-section" class="t-card">
+
+        <h3><a target="_blank" href="https://www.partydrinks.bg" class="website-link">www.partydrinks.bg</a> - Цялостен редизайн на най-големият сайт за алкохолни напитки в България.</h3>
+
+        <div class="design-comparison-container">
+
+            <img src="{% static 'images/partydrinks-old.png' %}" alt="Old Design" class="image-before">
+            <img src="{% static 'images/partydrinks-new.png' %}" alt="New Design" class="image-after">
+            <div class="slider-bar">
+                <div class="slider-handle"></div>
+            </div>
+
+        </div>
+
+    </div>
+
 
     <div id="testimonials-cards">
 
@@ -138,4 +154,60 @@
             ease: "power2.out"
         });
     });
+</script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const container = document.querySelector('.design-comparison-container');
+        const slider = container.querySelector('.slider-bar');
+        const imageBefore = container.querySelector('.image-before');
+        const imageAfter = container.querySelector('.image-after');
+
+        let isDragging = false;
+
+        const startDragging = (e) => {
+            isDragging = true;
+            const event = e.touches ? e.touches[0] : e;
+            slider.style.transition = 'none'; // Disable transition during drag for smoother movement
+            document.body.style.cursor = 'ew-resize';
+            document.body.style.userSelect = 'none';
+        };
+
+        const stopDragging = () => {
+            isDragging = false;
+            slider.style.transition = ''; // Re-enable transition
+            document.body.style.cursor = 'default';
+            document.body.style.userSelect = 'auto';
+        };
+
+        const onDrag = (e) => {
+            if (!isDragging) return;
+
+            const event = e.touches ? e.touches[0] : e;
+            const rect = container.getBoundingClientRect();
+            let offsetX = event.clientX - rect.left;
+
+            // Clamp the value between 0 and container's width
+            offsetX = Math.max(0, Math.min(offsetX, rect.width));
+
+            const percent = (offsetX / rect.width) * 100;
+
+            slider.style.left = `${percent}%`;
+            imageAfter.style.clipPath = `inset(0 0 0 ${percent}%)`;
+            imageBefore.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+
+
+        };
+
+        slider.addEventListener('mousedown', startDragging);
+        slider.addEventListener('touchstart', startDragging);
+
+        document.addEventListener('mouseup', stopDragging);
+        document.addEventListener('touchend', stopDragging);
+
+        document.addEventListener('mousemove', onDrag);
+        document.addEventListener('touchmove', onDrag);
+    });
+
 </script>
