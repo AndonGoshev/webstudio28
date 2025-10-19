@@ -209,4 +209,8 @@
         justify-content: flex-start;
     }
 
+    .t-card {
+        min-width: 250px !important;
+    }
+
 }
